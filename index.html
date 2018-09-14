@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        pre {
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body ng-app="graphApp" ng-controller="graphController">
+    <button ng-show="userInfo.isAuthenticated" ng-click="logout()">Logout</button>
+    <button ng-hide="userInfo.isAuthenticated" ng-click="login()">Login</button>
+    <pre>Authenticated as:{{userInfo}}</pre>
+    <hr />
+    <button ng-click="getProfile()">Get Profile</button>
+    <pre>{{profile}}</pre>
+    <script src="Scripts/lib/angular.js"></script>
+    <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal.min.js"></script>
+    <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal-angular.min.js"></script>
+    <script src="Scripts/App.js"></script>
+</body>
+
+</html>
